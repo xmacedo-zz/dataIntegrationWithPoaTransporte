@@ -1,4 +1,7 @@
-O sistema em si, usa um banco de dados H2, para guardar as informacoes em memoria e nao precisar instalar um BD.
+# Data Integration With Poa Transporte
+Sistema de integracao com a API Poa Transporte. 
+
+O sistema usa um banco de dados H2, para guardar as informacoes em memoria, Spring Boot e JPA para administrar as entidades de banco.
 
 ## Parte 1
 Criado o controller IntegrationController ("/api/integracao), para gerenciar e carregar os dados da API PoaTrasnporte.
@@ -116,17 +119,17 @@ DELETE {URL_SERVIDOR}/api/itinerario?idLinha=123&idLocalizacao=456
 ```
 
 
-##Parte 4
+## Parte 4
 
 - Para **FILTRAR** linhas por meio de um raio:
 ```
-GET {URL_SERVIDOR}/api/linha/pesquisar?idLinha=456
+GET {URL_SERVIDOR}/api/linha/raio?latitude=-31&longitude=-50&raio=100
 ```
-> Usar o parametro idLinha para **BUSCAR** a linha que seja ID Linha "456"
+> Usar o parametro latitude para **FILTRAR** as linhas que seja latitude "-31", Longitude "-50" e raio "100"
 
 
 
-##Parte 5
+## Parte 5
 A URL [http://datapoa.com.br/storage/f/2017-03-24T13%3A38%3A33.430Z/taxis.csv][Link] fornecida, nao esta "funcionando
 " e o site nao possui informacoes sobre os pontos de "Taxi"
 
