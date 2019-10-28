@@ -1,0 +1,5 @@
+CREATE TABLE IF not EXISTS linha (
+  id INT PRIMARY KEY,
+  nome VARCHAR(250) NOT NULL,
+  codigo VARCHAR(250) NOT NULL
+);
