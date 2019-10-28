@@ -75,9 +75,7 @@ public class LaneServiceImpl implements LaneService {
         Double lngMin = longitude - arcoLng;
         Double lngMax = longitude + arcoLng;
 
-        List<Lane> lanesByLatAndLong = this.laneRepository.findByLatMinAndLatMaxAndLongMinAndLonMax(latMin, latMax, lngMin, lngMax);
-
-        List<Lane> lanesList = new ArrayList<>();
+        List<Lane> lanesList = this.laneRepository.findByLatMinAndLatMaxAndLongMinAndLonMax(latMin, latMax, lngMin, lngMax);
 
         return lanesList.stream().map(lane1 -> {
             LaneDto laneDto = lane1.buildToLaneDTO();

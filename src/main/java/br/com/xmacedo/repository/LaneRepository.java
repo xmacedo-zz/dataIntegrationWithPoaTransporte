@@ -17,6 +17,6 @@ public interface LaneRepository extends JpaRepository<Lane, Long> {
         " join Location lc ON it.idLocalizacao = lc.id  " +
         " WHERE (lc.lat >= :la1 AND lc.lat <= :la2) " +
         "   AND (lc.lng >= :ln1 AND lc.lng <= :ln2)")
-    List<Lane> findByLatMinAndLatMaxAndLongMinAndLonMax(@Param("la1")Double latMin, @Param("la2")Double latMax,
-        @Param("ln1")Double lonMin, @Param("ln2")Double lonMax);
+    List<Lane> findByLatMinAndLatMaxAndLongMinAndLonMax(@Param("la1") Double latMin, @Param("la2") Double latMax,
+        @Param("ln1") Double lonMin, @Param("ln2") Double lonMax);
 }
