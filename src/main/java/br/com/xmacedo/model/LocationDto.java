@@ -20,9 +20,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LocationDto {
     @JsonProperty("lat")
-    private String lat;
+    private Double lat;
     @JsonProperty("lng")
-    private String lng;
+    private Double lng;
 
     private Long   idLinha;
 

@@ -17,6 +17,6 @@ public class Location {
     @Id
     @GeneratedValue(strategy= GenerationType.SEQUENCE, generator="localizacao_seq")
     private Long id;
-    private String lat;
-    private String lng;
+    private Double lat;
+    private Double lng;
 }
